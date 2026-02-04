@@ -1,75 +1,69 @@
-# Nuxt Minimal Starter
+# Panduan Penggunaan Website Portfolio (New Version)
+**Versi Dokumen: 2.0 (Nuxt.js Migration)**
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 1. Pendahuluan
+Website ini adalah versi modern dari Portfolio Alya Dijayanti yang telah dimigrasi dari Laravel ke **Nuxt.js (Fullstack)**. Arsitektur ini menggabungkan frontend dan backend dalam satu framework yang efisien, cepat, dan modern.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 2. Spesifikasi Teknis (Tech Stack)
+Aplikasi ini menggunakan teknologi terbaru:
+*   **Framework**: Nuxt 3 (Vue 3 + Nitro Engine) - Menangani Frontend dan Backend Server sekaligus.
+*   **Database**: PostgreSQL - Database relasional yang robust.
+*   **Driver Database**: `pg` (node-postgres) - Konektor native Node.js untuk kinerja tinggi.
+*   **Styling**: Tailwind CSS - Utility-first CSS framework.
 
-```bash
-# npm
-npm install
+---
 
-# pnpm
-pnpm install
+## 3. Cara Menjalankan Aplikasi
+Berbeda dengan versi Laravel, versi Nuxt ini lebih simpel untuk dijalankan.
 
-# yarn
-yarn install
+### Prasyarat
+1.  Pastikan **Node.js** terinstall (v18+).
+2.  Pastikan **PostgreSQL** berjalan.
+3.  File `.env` sudah dikonfigurasi dengan benar (Lihat `PANDUAN_SETUP_DATABASE.md`).
 
-# bun
-bun install
-```
+### Langkah-langkah
+1.  **Install Dependency** (hanya pertama kali):
+    ```bash
+    npm install
+    ```
 
-## Development Server
+2.  **Setup Database**:
+    Jalankan script ini untuk membuat database dan tabel otomatis:
+    ```bash
+    node scripts/init-db.js
+    ```
 
-Start the development server on `http://localhost:3000`:
+3.  **Jalankan Server Development**:
+    ```bash
+    npm run dev
+    ```
+    *Aplikasi akan berjalan di: http://localhost:3000*
 
-```bash
-# npm
-npm run dev
+---
 
-# pnpm
-pnpm dev
+## 4. Fitur & Status Migrasi
+Saat ini aplikasi sedang dalam tahap migrasi. Berikut adalah status fitur:
 
-# yarn
-yarn dev
+### ✅ Tersedia (Completed)
+*   **Halaman Beranda (Landing Page)**: Tampilan utama dengan Hero section.
+*   **API Projects**: Endpoint `/api/projects` untuk mengambil data dari database PostgreSQL.
+*   **Integrasi Database**: Koneksi aktif ke PostgreSQL.
 
-# bun
-bun run dev
-```
+### 🚧 Dalam Pengembangan (Coming Soon)
+*   **Admin Dashboard**: Halaman login dan manajemen konten sedang dimigrasi dari Laravel.
+*   **Tech Matrix Dinamis**: Sedang disesuaikan dengan struktur data baru.
 
-## Production
+---
 
-Build the application for production:
+## 5. Struktur Folder Penting
+*   `pages/` - Halaman frontend (Vue components).
+*   `server/api/` - Backend API endpoints (pengganti Controller Laravel).
+*   `server/utils/` - Utilitas backend (koneksi database, dll).
+*   `scripts/` - Script bantu untuk maintenance database.
+*   `nuxt.config.ts` - Konfigurasi utama aplikasi.
 
-```bash
-# npm
-npm run build
+---
 
-# pnpm
-pnpm build
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
