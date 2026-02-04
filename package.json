@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "mysql2": "^3.9.0",
+    "nuxt": "^3.11.0",
+    "pg": "^8.18.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/pg": "^8.16.0"
+  }
+}

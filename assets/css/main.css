@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrapbook-border {
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px 0px #000;
+}
+
+.dark .scrapbook-border {
+    border: 2px solid #F472B6;
+    box-shadow: 4px 4px 0px 0px #F472B6;
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px #F472B6;
+    color: transparent;
+}
+
+.stamp-button {
+    @apply scrapbook-border bg-primary text-white px-8 py-4 font-display font-[800] text-xl uppercase tracking-tighter hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_#000] active:translate-y-[2px] transition-all inline-block text-center;
+}
+
+.tech-tag {
+    @apply px-3 py-1 bg-slate-100 dark:bg-zinc-700 rounded text-[10px] font-bold uppercase tracking-wider border border-black/10 dark:border-white/10;
+}
