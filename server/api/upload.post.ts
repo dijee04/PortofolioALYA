@@ -50,10 +50,11 @@ export default defineEventHandler(async (event) => {
         };
 
     } catch (error: any) {
-        console.error('Upload error:', error);
+        console.error('Upload error details:', error); // Log full error object
         throw createError({
             statusCode: error.statusCode || 500,
-            statusMessage: error.statusMessage || 'Upload failed',
+            statusMessage: error.message || 'Upload failed', // Send actual error message to client for debugging
+            data: error // Include error data in response
         });
     }
 });
