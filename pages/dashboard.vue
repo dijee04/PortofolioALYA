@@ -27,3 +27,4 @@ useHead({
         </NuxtLayout>
     </div>
 </template>
+..

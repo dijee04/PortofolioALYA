@@ -1,0 +1,16 @@
+#####################################
+# COPY SEMUA ISI FILE INI
+# DAN PASTE KE "Environment Variables" DI VERCEL
+#####################################
+
+# 1. Cloudinary Credentials (Sudah Diisi)
+CLOUDINARY_CLOUD_NAME=dmuiw36j0
+CLOUDINARY_API_KEY=211237532616355
+CLOUDINARY_API_SECRET=YEL12xzJxB24p9Z0wxPZMlUGsPE
+
+# 2. Nuxt Secret (Wajib untuk Session)
+NUXT_SECRET=rahasia_aman_12345_ganti_aja_bebas
+
+# 3. DATABASE_URL (SANGAT PENTING!)
+# JANGAN PAKAI LOCALHOST! GANTI DENGAN URL DARI CLOUD (MISAL NEON/SUPABASE)
+# DATABASE_URL=postgres://user:password@host-cloud.com:5432/dbname

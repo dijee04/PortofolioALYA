@@ -21,7 +21,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
-                display: ["Syne", "sans-serif"], // Changed to Syne/Space based on config but let's stick to what was there or updated
+                display: ["Outfit", "sans-serif"], // Changed to Outfit for Neo-brutalism look
                 handwriting: ["Gloria Hallelujah", "cursive"],
                 body: ["Space Grotesk", "sans-serif"],
             },

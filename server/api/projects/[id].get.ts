@@ -7,7 +7,27 @@ export default defineEventHandler(async (event) => {
         if (res.rows.length === 0) {
             throw createError({ statusCode: 404, statusMessage: 'Project not found' });
         }
-        return res.rows[0];
+
+        const project = res.rows[0];
+
+        // Helper to normalize JSON fields
+        const normalizeJson = (field: any) => {
+            if (Array.isArray(field)) return field;
+            if (typeof field === 'string') {
+                try {
+                    return JSON.parse(field);
+                } catch (e) {
+                    return [];
+                }
+            }
+            return [];
+        };
+
+        return {
+            ...project,
+            tech_stack: normalizeJson(project.tech_stack),
+            gallery_images: normalizeJson(project.gallery_images)
+        };
     } catch (err) {
         throw createError({ statusCode: 500, statusMessage: 'Database error', data: err });
     }

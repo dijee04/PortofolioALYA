@@ -66,6 +66,4 @@ Saat ini aplikasi sedang dalam tahap migrasi. Berikut adalah status fitur:
 
 ---
 
-## 6. Troubleshooting
-*   **Error "password authentication failed"**: Cek password di `.env` dan pastikan sama dengan password PostgreSQL di komputer Anda.
-*   **Error "Cannot find module"**: Coba hapus folder `node_modules` dan jalankan `npm install` lagi.
+

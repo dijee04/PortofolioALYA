@@ -21,6 +21,11 @@ CREATE TABLE IF NOT EXISTS projects (
     tech_stack JSONB, -- Changed to JSONB for better querying
     github_url VARCHAR(255),
     live_url VARCHAR(255),
+    behance_url VARCHAR(255),
+    problem_statement TEXT,
+    solution_details TEXT,
+    process_details TEXT,
+    gallery_images JSONB,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
