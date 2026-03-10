@@ -21,9 +21,9 @@ export default {
             },
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
-                display: ["Outfit", "sans-serif"], // Changed to Outfit for Neo-brutalism look
+                display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
                 handwriting: ["Gloria Hallelujah", "cursive"],
-                body: ["Space Grotesk", "sans-serif"],
+                body: ["Inter", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "12px",
